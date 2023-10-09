@@ -3,6 +3,8 @@ import Home from "../pages/Home";
 import App from "../App";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
+import AllBooks from "../pages/AllBooks";
+import BookDetails from "../pages/BookDetails";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +14,14 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/allbooks",
+        element: <AllBooks></AllBooks>,
+      },
+      {
+        path: "/book/:id",
+        element: <BookDetails></BookDetails>,
       },
     ],
   },

@@ -18,31 +18,37 @@ export default function Navbar() {
   //   const user = false;
 
   return (
-    <div className="navbar bg-base-300 border-b-2 px-14">
+    <div className="navbar bg-neutral text-white border-b-2 py-5 px-14">
       <div className="flex-1">
-        <Link to="/" className="normal-case text-2xl">
+        <Link to="/" className="normal-case text-3xl">
           BOOKS
         </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link to="/allbooks">All Books</Link>
-          </li>
+          <button>
+            <Link to="/allbooks" className="btn btn-active btn-ghost">
+              All Books
+            </Link>
+          </button>
           {!user.email && (
             <>
-              <li>
-                <Link to="/signin">Sign In</Link>
-              </li>
-              <li>
-                <Link to="/signup">Sign Up</Link>
-              </li>
+              <button>
+                <Link to="/signin" className="btn btn-active btn-ghost">
+                  Sign In
+                </Link>
+              </button>
+              <button>
+                <Link to="/signup" className="btn btn-active btn-ghost">
+                  Sign Up
+                </Link>
+              </button>
             </>
           )}
           {user.email && (
-            <li>
-              <button onClick={handleLogOut}>Log Out</button>
-            </li>
+            <button className="btn btn-active btn-ghost" onClick={handleLogOut}>
+              Log Out
+            </button>
           )}
         </ul>
       </div>
