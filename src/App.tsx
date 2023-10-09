@@ -7,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useAppDispatch } from "./hooks/hook";
 import { setLoading, setUser } from "./redux/api/userSlice";
 import { auth } from "./lib/firebase";
+import Footer from "./components/Footer";
 function App() {
   const dispatch = useAppDispatch();
 
@@ -27,6 +28,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <Outlet />
+      <Footer></Footer>
     </>
   );
 }

@@ -18,7 +18,7 @@ export default function Navbar() {
   //   const user = false;
 
   return (
-    <div className="navbar bg-base-100 border-b-2 px-14">
+    <div className="navbar bg-base-300 border-b-2 px-14">
       <div className="flex-1">
         <Link to="/" className="normal-case text-2xl">
           BOOKS
