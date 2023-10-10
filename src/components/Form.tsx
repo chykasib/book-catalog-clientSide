@@ -35,12 +35,12 @@ export default function Form({ text, input }: Ifrom) {
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 hover:shadow-xl">
           <div className="card-body">
             <form onSubmit={(e) => handleSignup(e)}>
               {input && (
                 <div className="form-control">
-                  <p>
+                  <p className="text-lg text-gray-600">
                     Please submit an email and username and create a password to
                     create your account.
                   </p>
@@ -57,7 +57,9 @@ export default function Form({ text, input }: Ifrom) {
               )}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-lg text-gray-800">
+                    Email
+                  </span>
                 </label>
                 <input
                   name="email"
@@ -68,17 +70,24 @@ export default function Form({ text, input }: Ifrom) {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-lg text-gray-800">
+                    Password
+                  </span>
                 </label>
                 <input
-                  type="text"
+                  type="password" // Change input type to password for password fields
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
                 />
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">{text}</button>
+                <button
+                  className="btn btn-primary hover:scale-105 transition-transform"
+                  style={{ backgroundColor: "#3182CE" }} // Change button color
+                >
+                  {text}
+                </button>
               </div>
             </form>
             <div className="flex justify-between">

@@ -23,7 +23,7 @@ export default function HeroSection() {
               your fervor for reading.
             </p>
             <div className="card-actions justify-start">
-              <button className="btn btn-primary">
+              <button className="btn btn-primary hover:scale-105 transition-transform">
                 <Link to="/allbooks">All Books</Link>
               </button>
             </div>

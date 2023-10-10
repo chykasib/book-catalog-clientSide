@@ -27,7 +27,10 @@ export default function AllBookSection() {
           ))}
       </div>
       <div className="grid justify-center w-full mb-6">
-        <Link to="/allbooks" className="text-center  btn-primary px-5 py-3">
+        <Link
+          to="/allbooks"
+          className="text-center hover:scale-105 transition-transform  btn-primary px-5 py-3"
+        >
           See More Books
         </Link>
       </div>
