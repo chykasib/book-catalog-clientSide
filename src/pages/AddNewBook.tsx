@@ -3,6 +3,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { useCreateBookMutation } from "../redux/api/bookApiSlice";
+import toast from "react-hot-toast";
 
 export default function AddNewBook() {
   const [createBook] = useCreateBookMutation();
@@ -25,7 +26,7 @@ export default function AddNewBook() {
     };
     createBook({ book });
     form.reset();
-    window.alert("Book created successfully");
+    toast.success("Book created successfully");
     navigate("/allbooks");
   }
 
