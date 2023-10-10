@@ -49,13 +49,13 @@ export default function AllBooks() {
   return (
     <div className="flex m-10">
       <div className="w-3/12 border p-2 h-screen shadow">
-        <p className="mb-4">Filtering With</p>
-        <div className="mb-4">
-          <label className="label-text">Genre</label>
+        <p className="mb-16 mt-5 ms-4 text-3xl text-center">Filtering With</p>
+        <div className="mb-4 ">
+          <label className="label-text mx-12">Genre</label>
           <select
             onChange={(e) => handleSelect(e)}
             value={value}
-            className="select select-primary w-full max-w-xs"
+            className="select select-primary w-3/6 max-w-xs"
           >
             {data &&
               data.data.map((book: IBook) => (
@@ -64,11 +64,11 @@ export default function AllBooks() {
           </select>
         </div>
         <div>
-          <label className="label-text">Publication year</label>
+          <label className="label-text mx-4">Publication year</label>
           <select
             onChange={(e) => handleSelect(e)}
             value={value}
-            className="select select-primary w-full max-w-xs"
+            className="select select-primary w-3/6 max-w-xs"
           >
             {data &&
               data.data.map((book: IBook) => (
@@ -77,7 +77,7 @@ export default function AllBooks() {
           </select>
         </div>
       </div>
-      <div className="w-8/12 mx-auto">
+      <div className="w-3/5 mx-auto">
         <input
           type="text"
           onChange={(e) => handleChange(e)}

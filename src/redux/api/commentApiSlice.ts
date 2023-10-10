@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const CommentApi = createApi({
   reducerPath: "commentApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://book-catalog-backend-rouge.vercel.app/api/v1/comments",
+    baseUrl: "https://book-catalog-server-4zkp.onrender.com/api/v1/comments",
   }),
   tagTypes: ["comment"],
   endpoints: (builder) => ({
