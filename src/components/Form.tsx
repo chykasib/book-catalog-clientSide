@@ -40,7 +40,11 @@ export default function Form({ text, input }: Ifrom) {
             <form onSubmit={(e) => handleSignup(e)}>
               {input && (
                 <div className="form-control">
-                  <label className="label">
+                  <p>
+                    Please submit an email and username and create a password to
+                    create your account.
+                  </p>
+                  <label className="label pt-5">
                     <span className="label-text">User Name</span>
                   </label>
                   <input
