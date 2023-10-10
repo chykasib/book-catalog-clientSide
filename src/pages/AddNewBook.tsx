@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // import { FormEvent } from "react";
 
-import toast from "react-hot-toast";
-import { useCreateBookMutation } from "../redux/api/bookApiSlice";
 import { useNavigate } from "react-router-dom";
+import { useCreateBookMutation } from "../redux/api/bookApiSlice";
 
 export default function AddNewBook() {
   const [createBook] = useCreateBookMutation();
@@ -26,12 +25,12 @@ export default function AddNewBook() {
     };
     createBook({ book });
     form.reset();
-    toast("Book created successfully");
+    window.alert("Book created successfully");
     navigate("/allbooks");
   }
 
   return (
-    <div className="my-10 grid justify-center items-center">
+    <div className="my-8 grid justify-center items-center">
       <div className="w-[400px]">
         <div className="">
           <form onSubmit={(e) => handleBook(e)} className="grid">
@@ -65,6 +64,7 @@ export default function AddNewBook() {
             ></input>
             <label>About Book</label>
             <textarea
+              placeholder="Your text.."
               required
               name="details"
               className="border p-6 mb-2"

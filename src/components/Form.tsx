@@ -75,7 +75,7 @@ export default function Form({ text, input }: Ifrom) {
                   </span>
                 </label>
                 <input
-                  type="password" // Change input type to password for password fields
+                  type="password"
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
@@ -84,7 +84,7 @@ export default function Form({ text, input }: Ifrom) {
               <div className="form-control mt-6">
                 <button
                   className="btn btn-primary hover:scale-105 transition-transform"
-                  style={{ backgroundColor: "#3182CE" }} // Change button color
+                  style={{ backgroundColor: "#3182CE" }}
                 >
                   {text}
                 </button>

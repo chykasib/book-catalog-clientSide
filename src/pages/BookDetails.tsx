@@ -66,7 +66,7 @@ export default function BookDetails() {
         deleteBook(params.id)
           .unwrap()
           .then(() => {
-            toast("successfully deleted book");
+            toast.success("successfully deleted book");
             navigate("/allbooks");
           })
           .catch((error) => {
@@ -74,7 +74,7 @@ export default function BookDetails() {
           });
       }
     } else {
-      toast("Please login first");
+      toast.success("Please login first");
     }
   };
 
